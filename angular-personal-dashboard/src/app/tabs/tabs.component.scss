@@ -1,0 +1,23 @@
+.tabs {
+    display: flex;
+    gap: 14px;
+    background-color: rgba(white, 0.25);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.tab {
+    &:not(:last-child) {
+        margin-right: 14px;
+    }
+}
+
+.tab-tile {
+    display: flex;
+    padding: 18px;
+    background: rgba(black, 0.35);
+    cursor: pointer;
+    i {
+        color: #222;
+    }
+}

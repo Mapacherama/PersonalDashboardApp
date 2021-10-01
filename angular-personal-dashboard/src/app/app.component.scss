@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #e1e2ed;
+    background-image: url('https://images.unsplash.com/photo-1631092863845-74abb29404b2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFsbG93ZWVuLCBzcG9va3l8fHx8fHwxNjMzMDkyNzc5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .top-section {
-    background-color: #7fffd4;
     text-align: center;
     padding: 100px 0;
     h1 {
@@ -23,10 +26,12 @@
 }
 
 .content-section {
-    background-color: cadetblue;
     flex-grow: 1;
 }
 
 .bottom-section {
-    background-color: coral;
+    display: flex;
+    app-tabs {
+        margin: auto;
+    }
 }
