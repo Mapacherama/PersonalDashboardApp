@@ -11,7 +11,7 @@
 
 .tab {
     position: relative;
-    text-decoration: none;
+    text-decoration: none; // Haalt de underlines weg die de anchor tag maakt.
     z-index: 1;
 }
 
@@ -23,6 +23,14 @@
         color: #222;
     }
     transition: all 0.2s ease-out;
+}
+
+.tab.selected .tab-tile{
+  // transform: translateY(-28px);
+  transform: translateY(-50%);
+
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 2);
 }
 
 // STYLES FOR THE TAB TILE BACKGROUND 'SHAPE'
@@ -65,3 +73,5 @@
 }
 
 // END OF TAB TILE BACKGROUND 'SHAPE' STYLES
+
+
