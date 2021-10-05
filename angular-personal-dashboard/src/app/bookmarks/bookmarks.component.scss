@@ -1,10 +1,11 @@
-.bookmarks-wrapper{
-  height: 100%;
-  // background-color: wheat;
+.bookmarks-wrapper {
+    height: 100%;
+    // background-color: wheat;
 }
 
-.bookmark-tiles-container{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.bookmark-tiles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
