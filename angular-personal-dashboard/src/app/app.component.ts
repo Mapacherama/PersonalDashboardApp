@@ -9,28 +9,39 @@ import { RouterOutlet } from '@angular/router';
   animations: [
     trigger('routeAnim', [
       transition('* => *', [
+        style({
+          position: 'relative'
+        }),
+        query(':enter, :leave',[
+            style({
+              // display: 'block',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%'
+            })
+        ], { optional: true }),
         query(':enter', [
           style({
-            background: 'wheat',
-            display: 'block',
-            height: '100%'
-          }),
-          animate(1000, style({
-            background: 'transparent',
-            height: 'auto'
-          }))
+              opacity: 0
+          })
         ], { optional: true }),
-        style({
-          background: 'blue'
-        }),
-        animate(1000, style({
-          background: 'violet'
-        })),
-        animate(1000)
+          query(':leave',[
+              animate(1000, style({
+                opacity: 0,
+              }))
+          ], { optional: true }),
+          query(':enter', [
+            animate(1000, style({
+              opacity: 1
+            }))
+          ], { optional: true })
       ])
     ])
   ]
 })
+
 export class AppComponent {
   prepareRoute(outlet: RouterOutlet){
     if(outlet.isActivated) return outlet.activatedRoute.snapshot.url;
