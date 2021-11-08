@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Note } from './node.model';
+import { Note } from './note.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoteService {
 
-  notes: Note[]
+  notes: Note[] = [
+      new Note ("I'm soooo cool dude", "Pooooogchaaamp")
+  ]
 
   constructor() { }
 
