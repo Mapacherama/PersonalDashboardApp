@@ -7,7 +7,10 @@ import { Note } from './note.model';
 export class NoteService {
 
   notes: Note[] = [
-      new Note ("I'm soooo cool dude", "Pooooogchaaamp")
+      new Note ('Im soooo cool dude', 'test'),
+      new Note ('Hey!', 'testing one two three'),
+      new Note ('Im soooo cool dude', 'test'),
+      new Note ('Hey!', 'testing one two three')
   ]
 
   constructor() { }

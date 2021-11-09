@@ -11,9 +11,7 @@ export class NotesComponent implements OnInit {
 
   notes: Note[]
 
-  constructor(private noteService: NoteService) {
-
-  }
+  constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
     this.notes = this.noteService.getNotes()
